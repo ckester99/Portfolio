@@ -1,1 +1,28 @@
 /*//////////////////////////UNIVERSAL SELECTORS//////////////////////////////////////////*/
+
+
+/*/ /////////////////////////HEADER///////////////////////////////////////////////////////*/
+header {
+    width: 100%;
+    height: 5%;
+    background-color: blue;
+    display: flex;
+}
+
+header img {
+    border-radius: 25%;
+    flex-wrap: shrink;
+    height: 100%;
+    width: auto;
+}
+
+nav {
+    justify-self: right;
+    justify-content: space-around;
+    display: flex;
+    width: 20%;
+}
+nav a {
+    padding: 10px 1%;
+    color: bisque;
+}
