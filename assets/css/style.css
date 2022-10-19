@@ -1,48 +1,96 @@
 /*//////////////////////////UNIVERSAL SELECTORS//////////////////////////////////////////*/
+:root {
+    --primary-color: blue;
+    --secondary-color: bisque;
+}
 
 * {
     font-family: garamond, "courier new", monospace;
+    color: var(--secondary-color);
 }
 
+body {
+    background-image: url(../photos/body-background.jpg);
+}
 /*/ /////////////////////////HEADER///////////////////////////////////////////////////////*/
 
 header {
     width: 100%;
-    height: 200px;
-    background-color: blue;
+    height: 8vh;
+    margin-top: 5vh;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../photos/header-background.jpg);
-}
-
-header img {
-    border-radius: 40%;
-    flex-wrap: shrink;
-    max-height: 100%;
-    width: auto;
-    padding: 2%;
 }
 
 nav {
-    justify-self: right;
-    justify-content: space-around;
     display: flex;
+    flex-wrap: no-wrap;
     width: 20%;
+    justify-content: space-around;
 }
 
 nav a {
-    padding: 10px 1%;
-    color: bisque;
+    max-width: 50%;
+    padding: 3% 3%;
+    color: var(--secondary-color);
     border: 1px;
-    border-radius: 8px;
+    border-radius: 100px;
     border-style: dashed;
+    flex-shrink: 1;
+}
+
+nav a:hover {
+    background-color: black;
+    opacity: 0.3;
 }
 
 h1 {
-    color: bisque;
+    color: var(--secondary-color);
     font-weight: bold;
     font-size: 20px;
+    margin-left: 10%;
 }
 
-/*/ /////////////////////////HEADER///////////////////////////////////////////////////////*/
+/*/ /////////////////////////MAIN CONTENT///////////////////////////////////////////////////////*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects-title {
+    display: flex;
+    margin: 4vh 0;
+    justify-content: center;
+}
+
+#projects-content {
+    justify-self: center;
+    width: 75%;
+    margin: 4vh 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30vh;
+    width: 20vh;
+    border: 3px solid var(--secondary-color);
+}
+
+.card h2 {
+    margin-bottom: -8%;
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    padding: 1%;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 12px 6px var(--secondary-color), 0 0 20px 12px #b400ff, 0 0 25px 18px #ff00d4;
+}
