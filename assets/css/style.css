@@ -28,7 +28,7 @@ nav {
     display: flex;
     flex-wrap: no-wrap;
     width: 20%;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -38,7 +38,9 @@ nav a {
     border: 1px;
     border-radius: 100px;
     border-style: dashed;
-    flex-shrink: 1;
+    flex-shrink: 0;
+    margin: 8% 0;
+    overflow: hidden;
 }
 
 nav a:hover {
@@ -66,9 +68,29 @@ main {
     justify-content: center;
 }
 
+#first-project {
+    width: 40vh;
+    height: 25vh;
+}
+
+#first-project h2 {
+    margin-top: 11.5%;
+    margin-bottom: -4.5%;
+}
+
+#first-project a {
+    margin-top: 5%;
+    margin-bottom: -4.5%;
+    margin: 4% 0;
+    padding: 4%;
+}
+
 #projects-content {
     justify-self: center;
-    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 65%;
     margin: 4vh 0;
 }
 
@@ -77,12 +99,14 @@ main {
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
-    height: 30vh;
-    width: 20vh;
+    box-sizing: border-box;
+    min-height: 300px;
+    min-width: 200px;
     border: 3px solid var(--secondary-color);
     background: url(../photos/card-background-default.png);
     background-size: 200% 100%;
     background-position-x: -45px;
+    margin: 4vh 5%;
 }
 
 .card h2 {
@@ -110,4 +134,21 @@ main {
 
 .card:hover a {
     opacity: 1;
+}
+
+/*///////////////////////////ACCESSABILITY//////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 768px) {
+    #projects-content {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card a {
+        pointer-events: none;
+    }
+
+    a:focus {
+        pointer-events: all;
+    }
 }
