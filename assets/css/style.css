@@ -1,7 +1,8 @@
 /*//////////////////////////UNIVERSAL SELECTORS//////////////////////////////////////////*/
 :root {
-    --primary-color: blue;
+    --primary-color: coral;
     --secondary-color: bisque;
+    --tertiary-color: #008080;
 }
 
 * {
@@ -49,10 +50,15 @@ nav a:hover {
 }
 
 h1 {
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
     font-weight: bold;
-    font-size: 20px;
-    margin-left: 10%;
+    font-size: 38px;
+    margin: -20px 0px 0px 10%;
+    padding: 5px 5px 0 0;
+    background-color: var(--secondary-color);
+    box-shadow: -5px 5px 0px 5px var(--secondary-color), -10px 10px 0px 10px var(--tertiary-color);
+    align-self: center;
+    border-radius: 5px;
 }
 
 /*/ /////////////////////////MAIN CONTENT///////////////////////////////////////////////////////*/
@@ -64,8 +70,23 @@ main {
 
 #projects-title {
     display: flex;
-    margin: 4vh 0;
+    margin: 8vh 0 4vh 0;
     justify-content: center;
+    background-color: var(--primary-color);
+    padding: 0px 25vw 0px 25vw;
+    border-radius: 8px;
+}
+
+#projects-title h2 {
+    color: var(--tertiary-color);
+    font-weight: bold;
+    font-size: 38px;
+    margin: -20px 0px 0px 10%;
+    padding: 5px 5px 0 0;
+    background-color: var(--secondary-color);
+    box-shadow: -5px 5px 0px 5px var(--secondary-color), -10px 10px 0px 10px var(--tertiary-color);
+    align-self: center;
+    border-radius: 5px;
 }
 
 #first-project {
@@ -121,7 +142,7 @@ main {
 .card a {
     margin: 8% 0;
     padding: 7%;
-    background-color: blue;
+    background-color: var(--primary-color);
     min-width: 65%;
     text-align: center;
     border: 3px solid var(--secondary-color);
