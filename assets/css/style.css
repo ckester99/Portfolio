@@ -43,7 +43,7 @@ nav a {
 
 nav a:hover {
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.9;
 }
 
 h1 {
@@ -74,15 +74,19 @@ main {
 
 .card {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     align-items: center;
     height: 30vh;
     width: 20vh;
     border: 3px solid var(--secondary-color);
+    background: url(../photos/card-background-default.png);
+    background-size: 200% 100%;
+    background-position-x: -45px;
 }
 
 .card h2 {
+    margin-top: 30%;
     margin-bottom: -8%;
     background-color: var(--primary-color);
     border: 3px solid var(--secondary-color);
@@ -90,7 +94,20 @@ main {
     text-align: center;
 }
 
+.card a {
+    margin: 8% 0;
+    padding: 7%;
+    background-color: blue;
+    min-width: 65%;
+    text-align: center;
+    border: 3px solid var(--secondary-color);
+    opacity: 0;
+}
+
 .card:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 12px 6px var(--secondary-color), 0 0 20px 12px #b400ff, 0 0 25px 18px #ff00d4;
+}
+
+.card:hover a {
+    opacity: 1;
 }
