@@ -13,7 +13,7 @@
         <header>
             <h1>&emsp;Christian<br />Kester</h1>
             <nav>
-                <a href="#">About Me</a>
+                <button onclick="openAboutMe()">About Me</button>
                 <a href="https://github.com/ckester99">Github</a>
                 <a href="https://www.linkedin.com/in/christian-kester/">LinkedIn</a>
                 <a href="./assets/Resume_ChristianKester.pdf" download>Resume</a>
@@ -74,10 +74,31 @@
     <div class="popup" id="about-me">
         <div class="popup-background">
             <div class="popup-top-left">
-                <button>X</button>
+                <button onclick="closeAboutMe()">X</button>
             </div>
-            <div class="popup-bottom-left"><img src="./assets/photos/Profile.jpg" alt="Christian Kester Headshot" /></div>
-            <section></section>
+            <div class="popup-bottom-left">
+                <img src="./assets/photos/Profile.jpg" alt="Christian Kester Headshot" />
+                <a href="./assets/Resume_ChristianKester.pdf" download>Resume</a>
+            </div>
+            <section>
+                <div class="header-strikethrough">
+                    <h2>About Me</h2>
+                </div>
+                <p>asdfkalsdjfoiwaefdsljfnadsljfsapjfajslkdbfljadsfadfs</p>
+            </section>
         </div>
     </div>
+
+    <script>
+        function openAboutMe() {
+            var popup = document.getElementById("about-me");
+            popup.classList.add("show");
+            console.log("clicked");
+        }
+
+        function closeAboutMe() {
+            var popup = document.getElementById("about-me");
+            popup.classList.remove("show");
+        }
+    </script>
 </html>
