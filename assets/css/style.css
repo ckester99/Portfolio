@@ -169,10 +169,87 @@ main {
     opacity: 1;
 }
 
+/*/ //////////////////////////ABOUT ME POPUP/////////////////////////////////////////////////////*/
+.popup {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    height: 85vh;
+    width: 50vw;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    box-shadow: -0.5em 0.5em 0px 0.5em var(--secondary-color), -1em 1em 0px 1em var(--tertiary-color);
+}
+
+.popup button {
+    background-color: transparent;
+    border-style: none;
+    color: var(--secondary-color);
+    font-family: monospace;
+    font-size: 38px;
+    position: absolute;
+    left: 18px;
+    top: 10px;
+}
+
+.popup button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.popup-background {
+    background-color: var(--tertiary-color);
+    position: absolute;
+    border-radius: 8px;
+    top: 2%;
+    left: 0.5%;
+    width: 97.5%;
+    height: 97.5%;
+}
+
+.popup-top-left {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 30%;
+    width: 26%;
+    border-radius: 8px 8px 0 0;
+}
+
+.popup-bottom-left {
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    height: 70%;
+    width: 26%;
+    border-radius: 0 0 8px 8px;
+}
+
+.popup section {
+    background-color: var(--secondary-color);
+    position: absolute;
+    border-radius: 8px;
+    top: 2%;
+    right: 2%;
+    height: 96%;
+    width: 68%;
+}
+
+.popup img {
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    border-radius: 100%;
+}
+
 /*/ //////////////////////////ACCESSABILITY//////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 768px) {
-    /*////////////////////////HEADER////////////////////////////////////////////////////////////*/
+    /*////////////////////////HEADER/////////////////////////////////////////////////////////////*/
 
     nav {
         flex-wrap: wrap;
