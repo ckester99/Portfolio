@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Christian Kester Portfolio</title>
+        <link rel="icon" href="./assets/photos/icon.PNG" />
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>&emsp;Christian<br />Kester</h1>
+            <nav>
+                <button onclick="openAboutMe()">About Me</button>
+                <a href="https://github.com/ckester99">Github</a>
+                <a href="https://www.linkedin.com/in/christian-kester/">LinkedIn</a>
+                <a href="#contact-info">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="projects-title">
+                <h2>Projects</h2>
+            </section>
+
+            <div class="card" id="first-project" tabindex="0">
+                <h2>First Project</h2>
+                <a href="#">Repo</a>
+                <a href="#">Deployment</a>
+            </div>
+
+            <section id="projects-content">
+                <div class="card" tabindex="0">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+
+                <div class="card" tabindex="0">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+
+                <div class="card" tabindex="0">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+
+                <div class="card" tabindex="0">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+
+                <div class="card" tabindex="0">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+
+                <div class="card">
+                    <h2>Coming Soon</h2>
+                    <a href="#">Repo</a>
+                    <a href="#">Deployment</a>
+                </div>
+            </section>
+        </main>
+
+        <footer id="contact-info">
+            <h2>Contact Me</h2>
+            <p>704-564-2551</p>
+            <a href="mailto:christiankester77@gmail.com" id="email-adr"></a>
+            <a href="https://www.linkedin.com/in/christian-kester/">LinkedIn</a>
+        </footer>
+    </body>
+
+    <div class="popup" id="about-me">
+        <div class="popup-background">
+            <div class="popup-top-left">
+                <button onclick="closeAboutMe()">X</button>
+            </div>
+            <div class="popup-bottom-left">
+                <img src="./assets/photos/Profile.jpg" alt="Christian Kester Headshot" />
+                <a href="./assets/Resume_ChristianKester.pdf" download>Resume</a>
+            </div>
+            <section>
+                <div class="header-strikethrough">
+                    <h2>About Me</h2>
+                </div>
+                <p>This will be an about me section containing a description of my work history, projects, and info on what interests me.</p>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function openAboutMe() {
+            var popup = document.getElementById("about-me");
+            popup.classList.add("show");
+            console.log("clicked");
+        }
+
+        function closeAboutMe() {
+            var popup = document.getElementById("about-me");
+            popup.classList.remove("show");
+        }
+    </script>
+</html>
