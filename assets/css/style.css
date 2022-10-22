@@ -25,6 +25,7 @@ a:visited {
 a:hover,
 button:hover {
     opacity: 0.7;
+    cursor: pointer;
 }
 
 /*/ /////////////////////////HEADER///////////////////////////////////////////////////////*/
@@ -180,6 +181,42 @@ footer {
     bottom: 3vh;
     background-color: var(--primary-color);
     margin-top: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer h2 {
+    color: var(--tertiary-color);
+    font-weight: bold;
+    font-size: 38px;
+    margin-top: -20px;
+    padding: 5px 5px 0 0;
+    background-color: var(--secondary-color);
+    box-shadow: -5px 5px 0px 5px var(--secondary-color), -10px 10px 0px 10px var(--tertiary-color);
+    align-self: center;
+    border-radius: 5px;
+}
+
+footer a,
+footer p {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 24px;
+    padding: 5px 5px;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 0 0px 5px var(--secondary-color);
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+footer p:hover {
+    cursor: default;
+}
+
+#email-adr::before {
+    content: "christiankester77@gmail.com";
 }
 
 /*/ //////////////////////////ABOUT ME POPUP/////////////////////////////////////////////////////*/
@@ -335,20 +372,33 @@ footer {
 @media screen and (max-width: 768px) {
     /*////////////////////////HEADER/////////////////////////////////////////////////////////////*/
 
+    h1 {
+        margin-left: 30px;
+    }
+
     nav {
         flex-wrap: wrap;
         width: 180px;
+        margin-right: 5px;
+        align-items: center;
     }
 
-    nav a {
-        min-width: 75.5px;
+    nav a,
+    nav button {
+        width: 75.5px;
         max-width: 50%;
-        min-height: 28px;
-        max-height: 50%;
-        margin: 3% 1.5%;
+        height: 28px;
+        max-height: 31px;
+        margin: 5px 2px;
+        text-align: center;
+        vertical-align: center;
     }
 
-    /*/ ///////////////////////HEADER////////////////////////////////////////////////////////////*/
+    /*/ ///////////////////////MAIN CONTENT//////////////////////////////////////////////////////*/
+
+    #projects-title {
+        margin-top: 100px;
+    }
 
     #projects-content {
         justify-content: center;
@@ -361,5 +411,23 @@ footer {
 
     a:focus {
         pointer-events: all;
+    }
+
+    /*////////////////////////FOOTER/////////////////////////////////////////////////////////////*/
+
+    footer h2 {
+        font-size: 24px;
+        box-shadow: none;
+        margin: 0;
+        padding: 5px;
+    }
+
+    footer a,
+    footer p {
+        font-size: 14px;
+    }
+
+    #email-adr::before {
+        content: "Email";
     }
 }
