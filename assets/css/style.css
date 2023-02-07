@@ -373,6 +373,12 @@ footer p:hover {
     background-position-x: -45px;
 }
 
+#second-project {
+    background: url(../photos/hydro-home.png);
+    background-size: 200% 100%;
+    background-position-x: -45px;
+}
+
 /*/ //////////////////////////ACCESSABILITY//////////////////////////////////////////////////////*/
 
 @media screen and (max-width: 768px) {
